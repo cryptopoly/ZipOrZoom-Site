@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZipOrZoom — The modern archive manager</title>
+  <meta name="description" content="ZipOrZoom is a fast, native archive manager for macOS, Windows, and Linux. Create, extract, and manage ZIP, RAR, 7-Zip, and TAR archives with batch operations, watch folders, split archives, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="ZipOrZoom home">
+        <span class="brand-logo" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28">
+            <defs>
+              <linearGradient id="lg" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0%" stop-color="#8B5CF6" />
+                <stop offset="100%" stop-color="#3B82F6" />
+              </linearGradient>
+            </defs>
+            <rect x="2" y="4" width="28" height="24" rx="6" fill="url(#lg)" />
+            <rect x="14" y="4" width="4" height="24" fill="rgba(255,255,255,0.25)" />
+            <circle cx="16" cy="14" r="1.6" fill="#fff" />
+            <circle cx="16" cy="18" r="1.6" fill="#fff" />
+            <circle cx="16" cy="22" r="1.6" fill="#fff" />
+          </svg>
+        </span>
+        <span class="brand-name">ZipOrZoom</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#formats">Formats</a>
+        <a href="#platforms">Platforms</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="link-muted" href="https://github.com/cryptopoly/ZipOrZoom" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-primary btn-sm" href="#download">Download</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            v0.1.0 — Now in public beta
+          </span>
+          <h1>
+            Archive anything.<br />
+            <span class="gradient-text">Zoom through it.</span>
+          </h1>
+          <p class="lede">
+            A beautifully fast archive manager for macOS, Windows, and Linux. Create, extract, and manage <strong>ZIP</strong>, <strong>RAR</strong>, <strong>7-Zip</strong>, and <strong>TAR</strong> — with batch ops, watch folders, split volumes, and checksum verification built in.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="#download">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download for free
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#features">
+              See features
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+          <div class="hero-meta">
+            <div class="meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+              Native macOS build
+            </div>
+            <div class="meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+              Signed & notarized
+            </div>
+            <div class="meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+              Open source
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="app-window">
+            <div class="app-titlebar">
+              <div class="traffic">
+                <span class="traffic-dot red"></span>
+                <span class="traffic-dot yellow"></span>
+                <span class="traffic-dot green"></span>
+              </div>
+              <div class="app-title">project-release.zip</div>
+              <div class="app-actions">
+                <span class="app-pill">256 files</span>
+              </div>
+            </div>
+            <div class="app-body">
+              <div class="app-sidebar">
+                <div class="sidebar-section">Library</div>
+                <div class="sidebar-item active">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8v13H3V8"/><path d="M1 3h22v5H1z"/><path d="M10 12h4"/></svg>
+                  Recent
+                </div>
+                <div class="sidebar-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                  Archives
+                </div>
+                <div class="sidebar-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  Watch folders
+                </div>
+                <div class="sidebar-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+                  Recipes
+                </div>
+                <div class="sidebar-section">Tools</div>
+                <div class="sidebar-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  Benchmark
+                </div>
+                <div class="sidebar-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  Checksums
+                </div>
+              </div>
+              <div class="app-main">
+                <div class="file-toolbar">
+                  <div class="breadcrumb">
+                    <span>project-release.zip</span>
+                    <span class="sep">/</span>
+                    <span>src</span>
+                    <span class="sep">/</span>
+                    <span class="current">components</span>
+                  </div>
+                  <div class="tool-buttons">
+                    <button class="tool-btn" aria-hidden="true">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    </button>
+                    <button class="tool-btn" aria-hidden="true">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="file-header">
+                  <span>Name</span>
+                  <span>Size</span>
+                  <span>Ratio</span>
+                  <span>Modified</span>
+                </div>
+                <div class="file-row">
+                  <span class="file-name"><span class="file-icon folder"></span>assets</span>
+                  <span class="file-size">4.2 MB</span>
+                  <span class="file-ratio"><span class="bar"><span class="fill" style="width:62%"></span></span>62%</span>
+                  <span class="file-date">2d ago</span>
+                </div>
+                <div class="file-row">
+                  <span class="file-name"><span class="file-icon doc"></span>App.tsx</span>
+                  <span class="file-size">12.4 KB</span>
+                  <span class="file-ratio"><span class="bar"><span class="fill" style="width:78%"></span></span>78%</span>
+                  <span class="file-date">Yesterday</span>
+                </div>
+                <div class="file-row highlighted">
+                  <span class="file-name"><span class="file-icon doc"></span>ArchiveView.swift</span>
+                  <span class="file-size">28.9 KB</span>
+                  <span class="file-ratio"><span class="bar"><span class="fill" style="width:71%"></span></span>71%</span>
+                  <span class="file-date">1h ago</span>
+                </div>
+                <div class="file-row">
+                  <span class="file-name"><span class="file-icon doc"></span>Package.swift</span>
+                  <span class="file-size">275 B</span>
+                  <span class="file-ratio"><span class="bar"><span class="fill" style="width:43%"></span></span>43%</span>
+                  <span class="file-date">5h ago</span>
+                </div>
+                <div class="file-row">
+                  <span class="file-name"><span class="file-icon img"></span>icon.png</span>
+                  <span class="file-size">84.2 KB</span>
+                  <span class="file-ratio"><span class="bar"><span class="fill" style="width:12%"></span></span>12%</span>
+                  <span class="file-date">3d ago</span>
+                </div>
+                <div class="file-row">
+                  <span class="file-name"><span class="file-icon doc"></span>README.md</span>
+                  <span class="file-size">3.1 KB</span>
+                  <span class="file-ratio"><span class="bar"><span class="fill" style="width:58%"></span></span>58%</span>
+                  <span class="file-date">1w ago</span>
+                </div>
+                <div class="app-progress">
+                  <div class="progress-label">
+                    <span>Compressing · 7-Zip · Ultra</span>
+                    <span class="progress-percent">82%</span>
+                  </div>
+                  <div class="progress-track"><div class="progress-fill"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="floating-card card-a">
+            <div class="floating-title">
+              <span class="dot green"></span>
+              Watch folder active
+            </div>
+            <div class="floating-sub">~/Downloads → auto-zip</div>
+          </div>
+          <div class="floating-card card-b">
+            <div class="floating-title">
+              <span class="dot blue"></span>
+              Checksum verified
+            </div>
+            <div class="floating-sub monospace">SHA-256 · 9f3b2e…</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="strip">
+      <div class="container strip-inner">
+        <span class="strip-label">Handles every format you throw at it</span>
+        <div class="strip-formats">
+          <span class="fmt">ZIP</span>
+          <span class="fmt">RAR</span>
+          <span class="fmt">7Z</span>
+          <span class="fmt">TAR</span>
+          <span class="fmt">GZ</span>
+          <span class="fmt">BZ2</span>
+          <span class="fmt">XZ</span>
+          <span class="fmt">ZSTD</span>
+          <span class="fmt">LZ4</span>
+          <span class="fmt">SFX</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Features</span>
+          <h2>Everything a power user needs.<br /><span class="muted">Nothing you don't.</span></h2>
+          <p class="section-lede">
+            ZipOrZoom is built for engineers, creatives, and IT teams who move a lot of files. It's fast where it should be, cautious where it matters, and quiet the rest of the time.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature feature-wide">
+            <div class="feature-icon indigo">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+            </div>
+            <h3>Batch operations & recipes</h3>
+            <p>Save any workflow as a reusable recipe — format, preset, destination, naming rules, post-actions. Replay against thousands of files in one click.</p>
+            <div class="feature-code">
+              <code>recipe: <span class="t-key">nightly-backup</span> → <span class="t-val">7z</span> · ultra · split 1 GB · sha-256 · move to NAS</code>
+            </div>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon emerald">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>Watch folders</h3>
+            <p>Drop files into any watched folder and ZipOrZoom handles the rest — compress, rename, notify, move on. Set it and forget it.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon violet">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3>Checksums, built in</h3>
+            <p>MD5, SHA-1, SHA-256, SHA-512, xxHash. Verify archive integrity before and after — or stamp a digest into every outgoing file.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon amber">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <h3>Split & join</h3>
+            <p>Break massive archives into neat multi-part volumes for email, cloud, or USB — and rejoin them anywhere, with or without ZipOrZoom installed.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon rose">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <h3>Self-extracting archives</h3>
+            <p>Ship your archive as a single double-clickable executable for macOS, Windows, or Linux. No recipient install required.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon cyan">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3>Benchmark & estimator</h3>
+            <p>Compare formats on your own files before you commit. See real-world speed, ratio, and CPU cost side-by-side on your hardware.</p>
+          </article>
+
+          <article class="feature feature-wide">
+            <div class="feature-icon sky">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            </div>
+            <h3>Archive diff & versioning</h3>
+            <p>See exactly what changed between two archives — added, removed, modified, renamed. Keep a local history so you can roll back an archive without rebuilding it.</p>
+            <div class="feature-code">
+              <code><span class="t-add">+ 12 added</span> · <span class="t-mod">~ 3 modified</span> · <span class="t-rem">− 1 removed</span></code>
+            </div>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon lime">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+            </div>
+            <h3>Health dashboard</h3>
+            <p>Scan your archive library for corruption, duplicates, password failures, or orphaned split volumes — all in one view.</p>
+          </article>
+
+          <article class="feature">
+            <div class="feature-icon pink">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3>Duplicate detection</h3>
+            <p>Spot duplicate files across archives before you compress. By name, size, or content hash — your call.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="formats" class="section section-muted">
+      <div class="container">
+        <div class="split">
+          <div class="split-copy">
+            <span class="section-eyebrow">Formats</span>
+            <h2>The ones you use.<br />Plus the ones you forgot about.</h2>
+            <p class="section-lede">
+              ZipOrZoom reads and writes every major archive and compression format, with smart defaults, full password support, and Unicode-correct filenames across platforms.
+            </p>
+            <ul class="checklist">
+              <li><span class="check"></span> AES-256 encryption for ZIP and 7z</li>
+              <li><span class="check"></span> RAR5, including solid and recovery records</li>
+              <li><span class="check"></span> Ultra, fast, and store-only presets per format</li>
+              <li><span class="check"></span> Unicode filenames, correct on every OS</li>
+              <li><span class="check"></span> Pluggable format handlers for power users</li>
+            </ul>
+          </div>
+          <div class="split-visual">
+            <div class="format-grid">
+              <div class="format-card"><span class="format-name">ZIP</span><span class="format-meta">Read · Write · AES-256</span></div>
+              <div class="format-card"><span class="format-name">7-Zip</span><span class="format-meta">Read · Write · Ultra</span></div>
+              <div class="format-card"><span class="format-name">RAR</span><span class="format-meta">Read · Write · RAR5</span></div>
+              <div class="format-card"><span class="format-name">TAR</span><span class="format-meta">Read · Write · Streaming</span></div>
+              <div class="format-card"><span class="format-name">GZ</span><span class="format-meta">Read · Write</span></div>
+              <div class="format-card"><span class="format-name">BZ2</span><span class="format-meta">Read · Write</span></div>
+              <div class="format-card"><span class="format-name">XZ</span><span class="format-meta">Read · Write</span></div>
+              <div class="format-card"><span class="format-name">ZSTD</span><span class="format-meta">Read · Write · Fast</span></div>
+              <div class="format-card"><span class="format-name">LZ4</span><span class="format-meta">Read · Write</span></div>
+              <div class="format-card"><span class="format-name">SFX</span><span class="format-meta">Write · Cross-OS</span></div>
+              <div class="format-card"><span class="format-name">ISO</span><span class="format-meta">Read only</span></div>
+              <div class="format-card"><span class="format-name">CAB</span><span class="format-meta">Read only</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="platforms" class="section">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-eyebrow">Platforms</span>
+          <h2>Native where it matters.<br />Cross-platform everywhere else.</h2>
+          <p class="section-lede">
+            The macOS build is Swift-native, with Finder and Quick Look extensions. The Electron build ships signed, notarized binaries for Windows and Linux — same features, same keyboard shortcuts.
+          </p>
+        </div>
+
+        <div class="platform-grid">
+          <article class="platform">
+            <div class="platform-icon">
+              <svg viewBox="0 0 24 24" width="42" height="42" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+            </div>
+            <h3>macOS</h3>
+            <p>Apple Silicon + Intel · macOS 13 Ventura and later. Native SwiftUI app with Finder and Quick Look extensions.</p>
+            <ul class="platform-specs">
+              <li>Universal binary</li>
+              <li>Signed & notarized</li>
+              <li>Finder integration</li>
+            </ul>
+            <a class="btn btn-primary btn-block" href="#download">Download for Mac</a>
+          </article>
+
+          <article class="platform featured">
+            <span class="platform-badge">Popular</span>
+            <div class="platform-icon">
+              <svg viewBox="0 0 24 24" width="42" height="42" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+            </div>
+            <h3>Windows</h3>
+            <p>Windows 10 and 11 · x64 and ARM64. Installer and portable builds, with shell integration for right-click archive actions.</p>
+            <ul class="platform-specs">
+              <li>x64 & ARM64</li>
+              <li>Code-signed installer</li>
+              <li>Shell integration</li>
+            </ul>
+            <a class="btn btn-primary btn-block" href="#download">Download for Windows</a>
+          </article>
+
+          <article class="platform">
+            <div class="platform-icon">
+              <svg viewBox="0 0 24 24" width="42" height="42" fill="currentColor"><path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.835-.41 1.684-.287 2.489a.424.424 0 0 0-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.6.058.399.116.773.027 1.04-.225.714-.154 1.37.081 1.834.234.464.631.77 1.05.866.847.197 1.95.038 2.855-.678.874-.689 2.3-.99 3.594-.897.597.035 1.235.168 1.74.395.515.223.916.517 1.094.844.317.571.845.854 1.44.854.643 0 1.168-.336 1.476-.845.324-.507.835-.787 1.478-.85.646-.064 1.293.116 1.893.37 1.154.504 2.51.556 3.486.131.488-.21.88-.58 1.09-1.07.21-.488.173-1.115-.113-1.75-.287-.637-.813-1.218-1.523-1.667-.672-.413-1.46-.713-2.33-.865-.866-.151-1.76-.16-2.626-.004-.822.143-1.623.412-2.313.783-1.123.606-1.755 1.457-2.086 2.311h-.002c-.123.333-.153.677-.153 1.002 0 .328.034.653.116 1.016zM11.43 7.7c.333-.094.68-.143 1.032-.143.353 0 .7.049 1.033.143.336.096.654.238.945.42.289.185.553.409.784.669.229.26.425.559.584.885.16.328.282.684.363 1.06.083.376.124.773.124 1.183 0 .408-.041.805-.124 1.181-.081.377-.203.732-.363 1.06-.159.327-.355.626-.584.886-.231.26-.495.485-.784.669-.29.184-.609.325-.945.42-.333.094-.68.143-1.033.143-.352 0-.699-.049-1.032-.143a3.933 3.933 0 0 1-.945-.42 3.89 3.89 0 0 1-.784-.669 3.735 3.735 0 0 1-.584-.886 3.893 3.893 0 0 1-.363-1.06 4.324 4.324 0 0 1-.124-1.18c0-.41.041-.807.124-1.184.081-.376.203-.732.363-1.06.159-.326.355-.625.584-.885.231-.26.495-.484.784-.669.29-.182.609-.324.945-.42z"/></svg>
+            </div>
+            <h3>Linux</h3>
+            <p>Ubuntu 20.04+, Fedora 36+, Arch, Debian. AppImage, deb, rpm, and Flatpak — your pick.</p>
+            <ul class="platform-specs">
+              <li>AppImage · deb · rpm</li>
+              <li>GTK + Qt friendly</li>
+              <li>CLI included</li>
+            </ul>
+            <a class="btn btn-primary btn-block" href="#download">Download for Linux</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container">
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-num gradient-text">10+</div>
+            <div class="stat-label">Archive formats, read & write</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num gradient-text">3.4×</div>
+            <div class="stat-label">Faster than the built-in OS archiver</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num gradient-text">0 ads</div>
+            <div class="stat-label">No trackers, no upsells, ever</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num gradient-text">100%</div>
+            <div class="stat-label">Local — your files never leave your machine</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="section">
+      <div class="container">
+        <div class="download-card">
+          <div class="download-copy">
+            <span class="section-eyebrow">Download</span>
+            <h2>Grab the beta.<br />It's free.</h2>
+            <p class="section-lede">
+              ZipOrZoom is free during the public beta. Pick your platform to get the latest signed build from GitHub Releases.
+            </p>
+          </div>
+          <div class="download-actions">
+            <a class="download-option" href="https://github.com/cryptopoly/ZipOrZoom/releases/latest" target="_blank" rel="noopener">
+              <span class="download-os">macOS</span>
+              <span class="download-arch">Universal · .dmg</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a class="download-option" href="https://github.com/cryptopoly/ZipOrZoom/releases/latest" target="_blank" rel="noopener">
+              <span class="download-os">Windows</span>
+              <span class="download-arch">x64 · .exe</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a class="download-option" href="https://github.com/cryptopoly/ZipOrZoom/releases/latest" target="_blank" rel="noopener">
+              <span class="download-os">Linux</span>
+              <span class="download-arch">AppImage · deb · rpm</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section section-muted">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-eyebrow">FAQ</span>
+          <h2>The practical questions.</h2>
+        </div>
+        <div class="faq-grid">
+          <details class="faq-item" open>
+            <summary>Is ZipOrZoom actually free?</summary>
+            <p>Yes. The public beta is free on every platform, with no ads or trackers. A paid Pro tier with team features is planned after 1.0 — but everything currently shipping is free.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does it replace The Unarchiver, 7-Zip, or WinRAR?</summary>
+            <p>For the overwhelming majority of workflows, yes. ZipOrZoom reads and writes all the major formats those tools handle, plus modern ones like Zstandard. If you have a niche legacy format we don't support yet, let us know.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How does it handle large archives?</summary>
+            <p>Streaming throughout. ZipOrZoom never loads a full archive into memory — it works the same on a 50 MB zip as on a 400 GB multi-volume 7z. Progress is always cancellable.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does it work offline?</summary>
+            <p>Entirely. All compression, extraction, and checksum work happens on your machine. The only thing that touches the network is the auto-update check, which you can disable.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is the code open source?</summary>
+            <p>Yes. ZipOrZoom is developed in the open on GitHub. You can read, build, and contribute to both the Swift and Electron codebases.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What about encryption and passwords?</summary>
+            <p>ZIP uses AES-256 by default; 7z uses AES-256 with SHA-256 key derivation. Passwords are never stored unless you explicitly ask ZipOrZoom to remember them in your OS keychain.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container cta-inner">
+        <h2>Your files are waiting.</h2>
+        <p>Download ZipOrZoom and zip through your archive work today.</p>
+        <div class="cta-buttons">
+          <a class="btn btn-primary btn-lg" href="#download">Download for free</a>
+          <a class="btn btn-ghost-light btn-lg" href="https://github.com/cryptopoly/ZipOrZoom" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="brand">
+          <span class="brand-logo" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="24" height="24">
+              <defs>
+                <linearGradient id="lg2" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#8B5CF6" />
+                  <stop offset="100%" stop-color="#3B82F6" />
+                </linearGradient>
+              </defs>
+              <rect x="2" y="4" width="28" height="24" rx="6" fill="url(#lg2)" />
+              <rect x="14" y="4" width="4" height="24" fill="rgba(255,255,255,0.25)" />
+              <circle cx="16" cy="14" r="1.6" fill="#fff" />
+              <circle cx="16" cy="18" r="1.6" fill="#fff" />
+              <circle cx="16" cy="22" r="1.6" fill="#fff" />
+            </svg>
+          </span>
+          <span class="brand-name">ZipOrZoom</span>
+        </div>
+        <p class="footer-tag">The modern archive manager for macOS, Windows, and Linux.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="#formats">Formats</a>
+          <a href="#platforms">Platforms</a>
+          <a href="#download">Download</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="#faq">FAQ</a>
+          <a href="https://github.com/cryptopoly/ZipOrZoom" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://github.com/cryptopoly/ZipOrZoom/releases" target="_blank" rel="noopener">Releases</a>
+          <a href="https://github.com/cryptopoly/ZipOrZoom/issues" target="_blank" rel="noopener">Report an issue</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="license.html">License</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> ZipOrZoom. Made for people who move a lot of files.</span>
+      <span class="footer-version">v0.1.0 · beta</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
