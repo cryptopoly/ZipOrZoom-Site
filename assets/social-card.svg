@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="ZipOrZoom social preview">
+  <title>ZipOrZoom social preview</title>
+  <defs>
+    <linearGradient id="bg" x1="110" y1="66" x2="1087" y2="552" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F6F8FD"/>
+    </linearGradient>
+    <radialGradient id="glowPurple" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(260 138) rotate(24.6) scale(354 275)">
+      <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.34"/>
+      <stop offset="100%" stop-color="#A78BFA" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowBlue" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(963 126) rotate(145.5) scale(330 248)">
+      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#60A5FA" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowCyan" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(684 508) rotate(168.11) scale(402 160)">
+      <stop offset="0%" stop-color="#67E8F9" stop-opacity="0.26"/>
+      <stop offset="100%" stop-color="#67E8F9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="brand" x1="104" y1="90" x2="244" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="55%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="headline" x1="88" y1="215" x2="548" y2="352" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="55%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="windowStroke" x1="700" y1="120" x2="1102" y2="474" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D9DEF5"/>
+      <stop offset="100%" stop-color="#E9ECF8"/>
+    </linearGradient>
+    <linearGradient id="windowPanel" x1="741" y1="143" x2="1117" y2="477" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F7F9FD"/>
+    </linearGradient>
+    <linearGradient id="progress" x1="824" y1="433" x2="1062" y2="433" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="55%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="160%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="30" flood-color="#0F172A" flood-opacity="0.14"/>
+    </filter>
+    <filter id="cardShadow" x="-40%" y="-40%" width="180%" height="200%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#4338CA" flood-opacity="0.20"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="#EEF2FF"/>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="260" cy="138" r="240" fill="url(#glowPurple)"/>
+  <circle cx="963" cy="126" r="218" fill="url(#glowBlue)"/>
+  <ellipse cx="684" cy="508" rx="292" ry="116" fill="url(#glowCyan)"/>
+
+  <rect x="48" y="48" width="1104" height="534" rx="36" fill="rgba(255,255,255,0.65)" stroke="#E6E9F3"/>
+
+  <g>
+    <rect x="88" y="88" width="52" height="52" rx="16" fill="url(#brand)"/>
+    <path d="M105 104H127.5L109.5 124.5H131V135H105.5L123.5 114.5H105V104Z" fill="#FFFFFF"/>
+    <text x="158" y="111" fill="#0B0B12" font-family="Inter, SF Pro Display, Segoe UI, sans-serif" font-size="30" font-weight="800" letter-spacing="-0.03em">ZipOrZoom</text>
+    <text x="158" y="140" fill="#667085" font-family="Inter, SF Pro Display, Segoe UI, sans-serif" font-size="17" font-weight="500">The modern archive manager</text>
+  </g>
+
+  <g>
+    <rect x="88" y="176" width="200" height="34" rx="17" fill="#FFFFFF" stroke="#E7EAF2"/>
+    <circle cx="112" cy="193" r="5" fill="#10B981"/>
+    <text x="126" y="199" fill="#5A6474" font-family="Inter, SF Pro Text, Segoe UI, sans-serif" font-size="15" font-weight="600">v0.1.0 • public beta</text>
+  </g>
+
+  <text x="88" y="282" fill="#0B0B12" font-family="Inter, SF Pro Display, Segoe UI, sans-serif" font-size="70" font-weight="800" letter-spacing="-0.05em">
+    <tspan x="88" dy="0">Archive anything.</tspan>
+    <tspan x="88" dy="78" fill="url(#headline)">Zoom through it.</tspan>
+  </text>
+
+  <text x="88" y="430" fill="#4E5563" font-family="Inter, SF Pro Text, Segoe UI, sans-serif" font-size="27" font-weight="500" letter-spacing="-0.02em">
+    <tspan x="88" dy="0">Fast, native archive management for macOS, Windows, and Linux.</tspan>
+    <tspan x="88" dy="40">ZIP, RAR, 7-Zip, TAR, split volumes, batch ops, and checksums built in.</tspan>
+  </text>
+
+  <g>
+    <rect x="88" y="505" width="154" height="44" rx="22" fill="#0B0B12"/>
+    <text x="165" y="533" text-anchor="middle" fill="#FFFFFF" font-family="Inter, SF Pro Text, Segoe UI, sans-serif" font-size="18" font-weight="700">ZIP</text>
+    <rect x="254" y="505" width="154" height="44" rx="22" fill="#FFFFFF" stroke="#DDE3EF"/>
+    <text x="331" y="533" text-anchor="middle" fill="#0B0B12" font-family="Inter, SF Pro Text, Segoe UI, sans-serif" font-size="18" font-weight="700">RAR</text>
+    <rect x="420" y="505" width="154" height="44" rx="22" fill="#FFFFFF" stroke="#DDE3EF"/>
+    <text x="497" y="533" text-anchor="middle" fill="#0B0B12" font-family="Inter, SF Pro Text, Segoe UI, sans-serif" font-size="18" font-weight="700">7Z</text>
+    <rect x="586" y="505" width="154" height="44" rx="22" fill="#FFFFFF" stroke="#DDE3EF"/>
+    <text x="663" y="533" text-anchor="middle" fill="#0B0B12" font-family="Inter, SF Pro Text, Segoe UI, sans-serif" font-size="18" font-weight="700">TAR</text>
+  </g>
+
+  <g transform="rotate(-6 930 325)" filter="url(#softShadow)">
+    <rect x="720" y="122" width="402" height="362" rx="28" fill="url(#windowPanel)" stroke="url(#windowStroke)"/>
+    <rect x="720" y="122" width="402" height="48" rx="28" fill="#F9FAFD" stroke="#E7EAF2"/>
+    <circle cx="749" cy="146" r="6" fill="#FB7185"/>
+    <circle cx="769" cy="146" r="6" fill="#FBBF24"/>
+    <circle cx="789" cy="146" r="6" fill="#34D399"/>
+    <text x="921" y="151" text-anchor="middle" fill="#525866" font-family="Inter, SF Pro Text, Segoe UI, sans-serif" font-size="15" font-weight="700">project-release.zip</text>
+
+    <rect x="740" y="190" width="92" height="226" rx="20" fill="#F3F5FB"/>
+    <text x="758" y="218" fill="#8A93A4" font-family="Inter, SF Pro Text, Segoe UI, sans-serif" font-size="12" font-weight="700" letter-spacing="0.08em">LIBRARY</text>
+    <rect x="750" y="232" width="72" height="34" rx="12" fill="#FFFFFF"/>
+    <text x="786" y="253" text-anchor="middle" fill="#111827" font-family="Inter, SF Pro Text, Segoe UI, sans-serif" font-size="13" font-weight="700">Recent</text>
+    <text x="758" y="291" fill="#525866" font-family="Inter, SF Pro Text, Segoe UI, sans-serif" font-size="13" font-weight="600">Archives</text>
+    <text x="758" y="321" fill="#525866" font-family="Inter, SF Pro Text, Segoe UI, sans-serif" font-size="13" font-weight="600">Watch folders</text>
+    <text x="758" y="351" fill="#525866" font-family="Inter, SF Pro Text, Segoe UI, sans-serif" font-size="13" font-weight="600">Checksums</text>
+    <text x="758" y="381" fill="#525866" font-family="Inter, SF Pro Text, Segoe UI, sans-serif" font-size="13" font-weight="600">Recipes</text>
+
+    <rect x="852" y="190" width="248" height="28" rx="14" fill="#FFFFFF" stroke="#E7EAF2"/>
+    <text x="874" y="208" fill="#5B6474" font-family="Inter, SF Pro Text, Segoe UI, sans-serif" font-size="12" font-weight="700">project-release.zip / src / components</text>
+
+    <rect x="852" y="235" width="248" height="166" rx="18" fill="#FFFFFF" stroke="#E7EAF2"/>
+    <rect x="868" y="252" width="146" height="10" rx="5" fill="#D8DEEC"/>
+    <rect x="1036" y="252" width="44" height="10" rx="5" fill="#E7EAF2"/>
+
+    <rect x="868" y="281" width="200" height="15" rx="7.5" fill="#EEF2FF"/>
+    <rect x="868" y="312" width="192" height="15" rx="7.5" fill="#EEF2FF"/>
+    <rect x="868" y="343" width="220" height="15" rx="7.5" fill="#E0E7FF"/>
+    <rect x="868" y="343" width="86" height="15" rx="7.5" fill="url(#progress)"/>
+    <rect x="868" y="374" width="176" height="15" rx="7.5" fill="#EEF2FF"/>
+
+    <text x="868" y="428" fill="#5A6474" font-family="Inter, SF Pro Text, Segoe UI, sans-serif" font-size="12" font-weight="700">Compressing • 7-Zip • Ultra</text>
+    <rect x="868" y="440" width="204" height="12" rx="6" fill="#E7EAF2"/>
+    <rect x="868" y="440" width="168" height="12" rx="6" fill="url(#progress)"/>
+    <text x="1086" y="449" text-anchor="end" fill="#111827" font-family="Inter, SF Pro Text, Segoe UI, sans-serif" font-size="12" font-weight="800">82%</text>
+  </g>
+
+  <g filter="url(#cardShadow)">
+    <rect x="935" y="91" width="182" height="62" rx="20" fill="#FFFFFF"/>
+    <circle cx="964" cy="122" r="7" fill="#22C55E"/>
+    <text x="981" y="118" fill="#111827" font-family="Inter, SF Pro Text, Segoe UI, sans-serif" font-size="15" font-weight="800">Watch folder active</text>
+    <text x="981" y="138" fill="#667085" font-family="Inter, SF Pro Text, Segoe UI, sans-serif" font-size="13" font-weight="600">~/Downloads → auto-zip</text>
+  </g>
+
+  <g filter="url(#cardShadow)">
+    <rect x="896" y="480" width="200" height="62" rx="20" fill="#FFFFFF"/>
+    <circle cx="924" cy="511" r="7" fill="#3B82F6"/>
+    <text x="941" y="507" fill="#111827" font-family="Inter, SF Pro Text, Segoe UI, sans-serif" font-size="15" font-weight="800">Checksum verified</text>
+    <text x="941" y="527" fill="#667085" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="600">SHA-256 • 9f3b2e...</text>
+  </g>
+</svg>
